@@ -274,6 +274,22 @@ PHAS:
             match: '100'
             offset: 52
             size: 3
+NOP:
+    description: Nop
+    members:
+        - op1: '11111'
+        - opcat_extra:
+            match: '0'
+            size: 1
+            offset: 54
+        - op2_flow_ctrl:
+            match: '00'
+            size: 2
+            offset: 52
+        - nop:
+            match: '101'
+            offset: 38
+            size: 3
 SPEC:
     description: Special
     members:
