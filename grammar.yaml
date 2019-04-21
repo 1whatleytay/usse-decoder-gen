@@ -83,6 +83,44 @@ VMAD:
             offset: 10
         - src0_swiz: 4
         - src0_n: 6
+VDP:
+    description: Vector Dot Product (single issue)
+    members:
+        - opcode1: '00011'
+        - pred:
+            size: 3
+            type: ExtPredicate
+        - skipinv: 1
+        - clip_plane_enable:
+            size: 1
+            type: bool
+        - present_bit_0: '0'
+        - opcode2: 1
+        - dest_use_bank_ext: 1
+        - end: 1
+        - src0_bank_ext: 1
+        - increment_mode: 2
+        - gpi0_abs: 1
+        - repeat_count:
+            size: 2
+            type: RepeatCount
+        - nosched:
+            size: 1
+            type: bool
+        - write_mask: 4
+        - src0_neg: 1
+        - src0_abs: 1
+        - clip_plane_n: 3
+        - dest_bank: 2 
+        - src0_bank: 2
+        - gpi0_n: 2
+        - dest_n: 6
+        - gpi0_swiz: 4
+        - src0_swiz_w: 3
+        - src0_swiz_z: 3
+        - src0_swiz_y: 3
+        - src0_swiz_x: 3
+        - src0_n: 6
 VNMAD32:
     description: Vector operations except for MAD (F32)
     members:
