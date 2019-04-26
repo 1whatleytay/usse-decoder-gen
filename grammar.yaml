@@ -304,6 +304,65 @@ VCOMP:
         - write_mask:
             size: 4
             offset: 0
+BR:
+    description: Branch
+    members:
+        - op1: '11111'
+        - pred:
+            type: ExtPredicate
+            size: 3
+            offset: 56
+        - syncend:
+            size: 1
+            offset: 55
+        - opcat_extra:
+            match: '0'
+            size: 1
+            offset: 54
+        - op2_flow_ctrl:
+            match: '00'
+            size: 2
+            offset: 52
+        - exception:
+            type: bool
+            size: 1
+            offset: 51
+        - pwait:
+            type: bool
+            size: 1
+            offset: 45
+        - sync_ext:
+            size: 1
+            offset: 44
+        - nosched:
+            type: bool
+            size: 1
+            offset: 43
+        - br_monitor:
+            type: bool
+            size: 1
+            offset: 42
+        - save_link:
+            type: bool
+            size: 1
+            offset: 41
+        - br_op:
+            match: '00'
+            offset: 39
+            size: 2
+        - br_type:
+            offset: 38
+            size: 1
+        - any_inst:
+            offset: 21
+            size: 1
+        - all_inst:
+            offset: 20
+            size: 1
+        - br_off:
+            size: 20
+            offset: 0
+            type: uint32_t
 PHAS:
     description: Phase
     members:
