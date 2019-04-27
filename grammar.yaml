@@ -238,6 +238,82 @@ VPCK:
             size: 4
             offset: 1
         - comp_sel_0_bit0: 1
+
+SMP:
+    description: Sample Instructions
+    members:
+        - op1: '11100'
+        - pred:
+            type: ExtPredicate
+            offset: 56
+            size: 3
+        - skipinv:
+            size: 1
+            offset: 55
+        - nosched:
+            size: 1
+            offset: 54
+        - syncstart:
+            offset: 52
+            size: 1
+        - minpack:
+            size: 1
+            offset: 51
+        - src0_ext:
+            size: 1
+            offset: 50
+        - src1_ext:
+            offset: 49
+            size: 1
+        - src2_ext:
+            offset: 48
+            size: 1
+        - fconv_type:
+            offset: 46
+            size: 2
+        - mask_count:
+            size: 2
+            offset: 44
+        - dim:
+            size: 2
+            offset: 42
+        - lod_mode:
+            size: 2
+            offset: 40
+        - dest_use_pa:
+            size: 1
+            type: bool
+            offset: 39
+        - sb_mode:
+            offset: 37
+            size: 2
+        - src0_type:
+            offset: 35
+            size: 2
+        - src0_bank:
+            size: 1
+            offset: 34
+        - drc_sel:
+            size: 2
+            offset: 32
+        - src1_bank:
+            offset: 30
+            size: 2
+        - src2_bank:
+            offset: 28
+            size: 2
+        - dest_n:
+            size: 7
+            offset: 21
+        - src0_n:
+            size: 7
+            offset: 14
+        - src1_n:
+            size: 7
+            offset: 7
+        - src2_n:
+            size: 7
+            offset: 0
 VCOMP:
     description: Vector Complex Instructions
     members:
