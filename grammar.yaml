@@ -527,7 +527,7 @@ VCOMP:
             size: 7
         - src1_n:
             offset: 7
-            size: 6
+            size: 7
         - write_mask:
             size: 4
             offset: 0
