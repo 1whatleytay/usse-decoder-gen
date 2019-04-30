@@ -83,6 +83,76 @@ VMAD:
             offset: 10
         - src0_swiz: 4
         - src0_n: 6
+VMAD2:
+    description: Vector multiply-add (Normal version)
+    members:
+        - opcode1: '00000'
+        - dat_fmt:
+            offset: 58
+            size: 1
+        - pred: 
+            offset: 56
+            size: 2
+        - skipinv:
+            offset: 55
+            size: 1
+        - src0_swiz_bits2:
+            size: 1
+            offset: 53
+        - syncstart:
+            offset: 52
+            size: 1
+        - src0_abs:
+            offset: 50
+            size: 1
+        - src2_swiz:
+            offset: 45
+            size: 3
+        - src1_swiz_bit2:
+            offset: 44
+            size: 1
+        - nosched:
+            offset: 43
+            size: 1
+        - dest_mask:
+            offset: 39
+            size: 4
+        - src1_mod:
+            size: 2
+            offset: 37
+        - src2_mod:
+            size: 2
+            offset: 35
+        - src0_bank:
+            size: 1
+            offset: 34
+        - dest_bank:
+            size: 2
+            offset: 32
+        - src1_bank:
+            size: 2
+            offset: 30
+        - src2_bank:
+            size: 2
+            offset: 28
+        - dest_n:
+            offset: 22
+            size: 6
+        - src1_swiz_bits01:
+            size: 2
+            offset: 20
+        - src0_swiz_bits01:
+            size: 2
+            offset: 18
+        - src0_n:
+            size: 6
+            offset: 12
+        - src1_n:
+            size: 6
+            offset: 6
+        - src2_n:
+            size: 6
+            offset: 0
 VDP:
     description: Vector Dot Product (single issue)
     members:
