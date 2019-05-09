@@ -684,6 +684,54 @@ NOP:
             match: '101'
             offset: 38
             size: 3
+SMLSI:
+    description: SMLSI control instruction
+    members:
+        - op1: '11111'
+        - op2:
+            size: 3
+            offset: 56
+            match: '010'
+        - opcat: 
+            match: '01'
+            size: 2
+            offset: 52
+        - nosched:
+            offset: 50
+            size: 1
+        - temp_limit:
+            offset: 44
+            size: 4
+        - pa_limit:
+            offset: 40
+            size: 4
+        - sa_limit:
+            offset: 36
+            size: 4
+        - dest_inc_mode:
+            offset: 35
+            size: 1
+        - src0_inc_mode:
+            offset: 34
+            size: 1
+        - src1_inc_mode:
+            offset: 33
+            size: 1
+        - src2_inc_mode:
+            offset: 32
+            size: 1
+        - dest_inc:
+            offset: 24
+            size: 8
+        - src0_inc:
+            offset: 16
+            size: 8
+        - src1_inc:
+            offset: 8
+            size: 8
+        - src2_inc:
+            offset: 0
+            size: 8
 SPEC:
     description: Special
     members:
