@@ -9,7 +9,7 @@ VMOV:
             size: 1
             type: bool
         - test_bit_2: 1
-        - src2_bank_sel: 1
+        - src0_comp_sel: 1
         - syncstart:
             size: 1
             type: bool
@@ -28,13 +28,13 @@ VMOV:
             type: bool
         - move_data_type:
             size: 3
-            type: MoveDataType
+            type: DataType
         - test_bit_1: 1
         - src0_swiz: 4
         - src0_bank_sel: 1
         - dest_bank_sel: 2
         - src1_bank_sel: 2
-        - src0_comp_sel: 2
+        - src2_bank_sel: 2
         - dest_mask:
             size: 4
             type: Imm4
