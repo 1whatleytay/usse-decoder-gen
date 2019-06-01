@@ -278,6 +278,7 @@ VTST:
         - pred:
             size: 3
             offset: 56
+            type: ExtPredicate
         - skipinv:
             size: 1
             offset: 55
@@ -290,7 +291,7 @@ VTST:
         - dest_ext:
             size: 1
             offset: 51
-        - test_flag_2:
+        - src1_neg:
             size: 1
             offset: 50
         - src1_ext:
@@ -302,6 +303,9 @@ VTST:
         - prec:
             size: 1
             offset: 47
+        - src2_vscomp:
+            size: 1
+            offset: 46
         - rpt_count:
             type: RepeatCount
             size: 2
@@ -355,6 +359,7 @@ VTSTMSK:
         - pred:
             size: 3
             offset: 56
+            type: ExtPredicate
         - skipinv:
             size: 1
             offset: 55
@@ -379,6 +384,9 @@ VTSTMSK:
         - prec:
             size: 1
             offset: 47
+        - src2_vscomp:
+            size: 1
+            offset: 46
         - rpt_count:
             type: RepeatCount
             size: 2
