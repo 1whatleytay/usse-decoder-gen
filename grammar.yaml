@@ -443,7 +443,7 @@ VPCK:
         - nosched:
             size: 1
             type: bool
-        - src2_bank_sel: 1
+        - unknown: 1
         - syncstart:
             size: 1
             type: bool
@@ -460,20 +460,34 @@ VPCK:
         - dest_mask: 4
         - dest_bank_sel: 2
         - src1_bank_sel: 2
-        - dest_n:
-            size: 7
+        - src2_bank_sel: 2
+        - dest_n: 
             offset: 21
-        - comp_sel_3: 2
-        - scale: 1
-        - comp_sel_1: 2
-        - comp_sel_2: 2
-        - src1_n: 5
-        - comp0_sel_bit1: 1
+            size: 7
+        - comp_sel_3:
+            offset: 19
+            size: 2
+        - scale:
+            offset: 18
+            size: 1
+        - comp_sel_1:
+            offset: 16
+            size: 2
+        - comp_sel_2: 
+            offset: 14
+            size: 2
+        - src1_n: 
+            offset: 8
+            size: 6
+        - comp0_sel_bit1:
+            offset: 7
+            size: 1
         - src2_n:
-            size: 4
             offset: 1
-        - comp_sel_0_bit0: 1
-
+            size: 6
+        - comp_sel_0_bit0: 
+            offset: 0
+            size: 1
 SMP:
     description: Sample Instructions
     members:
