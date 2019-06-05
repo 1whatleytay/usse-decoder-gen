@@ -488,6 +488,39 @@ VPCK:
         - comp_sel_0_bit0: 
             offset: 0
             size: 1
+VBW:
+    description: Bitwise Instructions
+    members:
+        - op1_cnst: '01'
+        - op1: 3
+        - pred:
+            type: ExtPredicate
+            size: 3
+        - skipinv:
+            type: bool
+            size: 1
+        - nosched:
+            type: bool
+            size: 1
+        - repeat_count: 1
+        - sync_start: 1
+        - dest_ext: 1
+        - end: 1
+        - src1_ext: 1
+        - src2_ext: 1
+        - mask_count: 4
+        - src2_invert: 1
+        - src2_rot: 5
+        - src2_exth: 2
+        - op2: 1
+        - bitwise_partial: 1
+        - dest_bank: 2
+        - src1_bank: 2
+        - src2_bank: 2
+        - dest_n: 7
+        - src2_sel: 7
+        - src1_n: 7
+        - src2_n: 7   
 SMP:
     description: Sample Instructions
     members:
