@@ -810,10 +810,59 @@ PHAS:
     description: Phase
     members:
         - op1: '11111'
+        - op2:
+            size: 3
+            offset: 56
+            match: '010'
+        - sprvv:
+            size: 1
+            offset: 55
         - phas:
             match: '100'
             offset: 52
             size: 3
+        - end:
+            size: 1
+            offset: 51
+        - imm:
+            size: 1
+            offset: 50
+        - src1_bank_ext:
+            size: 1
+            offset: 49
+        - src2_bank_ext:
+            size: 1
+            offset: 48
+        - mode:
+            size: 1
+            offset: 45
+        - rate_hi:
+            size: 1
+            offset: 44
+        - rate_lo_or_nosched:
+            size: 1
+            offset: 43
+        - wait_cond:
+            size: 3
+            offset: 40
+        - temp_count:
+            size: 8
+            offset: 32
+        - src1_bank:
+            size: 2
+            offset: 30
+        - src2_bank:
+            size: 2
+            offset: 28
+        - exe_addr_high:
+            size: 6
+            offset: 14
+        - src1_n_or_exe_addr_mid:
+            size: 7
+            offset: 7
+        - src2_n_or_exe_addr_low:
+            size: 7
+            offset: 0
 NOP:
     description: Nop
     members:
